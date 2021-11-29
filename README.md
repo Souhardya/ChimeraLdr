@@ -21,5 +21,6 @@ Features:
 * HTTP / HTTPS  based stealthy communication 
 * Persistence
 * Tiny size 
+* Anti-Analysis
 
 
