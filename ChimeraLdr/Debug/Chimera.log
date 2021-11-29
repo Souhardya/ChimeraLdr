@@ -1,0 +1,11 @@
+﻿  Chimera.cpp
+  Control.cpp
+  global.cpp
+  Install.cpp
+  memory.cpp
+  urlsaver.cpp
+  utils.cpp
+C:\Users\malpwn\Documents\github_stuff\ChimeraLdr\utils.cpp(18,23): warning C4244: '=': conversion from 'DWORD' to 'WCHAR', possible loss of data
+  Generating Code...
+     Creating library C:\Users\malpwn\Documents\github_stuff\ChimeraLdr\Debug\Chimera.lib and object C:\Users\malpwn\Documents\github_stuff\ChimeraLdr\Debug\Chimera.exp
+  Chimera.vcxproj -> C:\Users\malpwn\Documents\github_stuff\ChimeraLdr\Debug\Chimera.dll
