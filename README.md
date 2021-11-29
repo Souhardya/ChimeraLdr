@@ -20,6 +20,7 @@ Chimera loader can serve as either a windows based malware / implant base or a 3
 Features:
 * HTTP / HTTPS  based stealthy communication 
 * Persistence
+* Highly modular
 * Tiny size 
 * Anti-Analysis
 
