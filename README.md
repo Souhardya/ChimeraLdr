@@ -15,7 +15,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Chimera loader can serve as either a windows based malware / implant base or a 3rd party software updater module depends on how the user leverages it and modifies it 
+Chimera loader previously Strator can serve as either a windows based malware / implant base or a 3rd party software updater module depends on how the user leverages it and modifies it 
 
 Features:
 * HTTP / HTTPS  based stealthy communication 
