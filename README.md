@@ -15,9 +15,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Chimera loader previously Strator can serve as either a windows based malware / implant base or a 3rd party software updater module depends on how the user leverages it and modifies it 
+Chimera loader previously Strator currently serving as a vk.com loader has the potential to serve as either a windows based malware / implant base or a 3rd party software updater module depends on how the user leverages it and modifies it 
 
 Features:
+
+* VK.com C&C
 * HTTP / HTTPS  based stealthy communication 
 * Persistence
 * Highly modular
