@@ -1,0 +1,15 @@
+﻿cl : command line warning D9025: overriding '/sdl' with '/GS-'
+  Chimera.cpp
+  Control.cpp
+  global.cpp
+  Install.cpp
+  memory.cpp
+  urlsaver.cpp
+  utils.cpp
+C:\Users\malpwn\Documents\github_stuff\ChimeraLdr\utils.cpp(18,23): warning C4244: '=': conversion from 'DWORD' to 'WCHAR', possible loss of data
+     Creating library C:\Users\malpwn\Documents\github_stuff\ChimeraLdr\Release\Chimera.lib and object C:\Users\malpwn\Documents\github_stuff\ChimeraLdr\Release\Chimera.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 48 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Chimera.vcxproj -> C:\Users\malpwn\Documents\github_stuff\ChimeraLdr\Release\Chimera.exe
